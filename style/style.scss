@@ -130,6 +130,11 @@ body {
 
             .card_title {
                 width: fit-content;
+                min-height: 48px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 700;

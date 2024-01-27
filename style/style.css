@@ -111,6 +111,11 @@ body .cards_grid .card_item .card_bg {
 body .cards_grid .card_item .card_title {
   width: -moz-fit-content;
   width: fit-content;
+  min-height: 48px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
