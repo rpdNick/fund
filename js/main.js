@@ -42,8 +42,7 @@ mobileMenuButton.click(function () {
 });
 
 $(window).on("resize", function () {
-  let window = $(this); //this = window
-  console.log(window.width());
+  let window = $(this);
   if (window.width() >= 850 && mobileMenuButton.hasClass("active")) {
     mobileMenuButton.removeClass("active");
     $('#mob_menu').removeClass("active");
