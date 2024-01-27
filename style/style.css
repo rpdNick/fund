@@ -91,6 +91,7 @@ body .cards_grid .card_item {
   min-height: 460px;
   max-height: 460px;
   padding: 22px 33px 26px 22px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
 }
 body .cards_grid .card_item .card_bg {
   position: absolute;
@@ -123,9 +124,11 @@ body .cards_grid .card_item .card_subtitle {
 body .cards_grid .card_item .card_statistic {
   margin-top: 13px;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 body .cards_grid .card_item .card_statistic .statistic_sum {
-  padding-top: 17px;
+  display: table;
 }
 body .cards_grid .card_item .card_statistic .statistic_sum .statistic_row {
   display: table-row;
@@ -133,7 +136,25 @@ body .cards_grid .card_item .card_statistic .statistic_sum .statistic_row {
 body .cards_grid .card_item .card_statistic .statistic_sum .statistic_row .row_name,
 body .cards_grid .card_item .card_statistic .statistic_sum .statistic_row .row_sum {
   display: table-cell;
-  padding-right: 19px;
+  padding: 0 19px 17px 0;
+}
+body .cirle_progress .circle_progress_wrap {
+  transform: rotate(180deg);
+}
+body .cirle_progress .circle_progress_wrap circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: rgba(229, 229, 229, 0.3);
+  stroke-width: 10;
+}
+body .cirle_progress .circle_progress_wrap .progress_bar {
+  stroke-linecap: round;
+}
+body .cirle_progress .circle_progress_wrap .progress_bar.orange {
+  stroke: #ff9f1e;
+}
+body .cirle_progress .circle_progress_wrap .progress_bar.blue {
+  stroke: #0085ff;
 }
 body .language_picker {
   display: flex;

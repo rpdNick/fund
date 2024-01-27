@@ -10,6 +10,7 @@ $color-black: #000;
 $color-white: #fff;
 $color-blue: #0085ff;
 $color-yellow: #ffc700;
+$color-orange: #ff9f1e;
 
 body {
     font-family: "Inter", sans-serif;
@@ -109,11 +110,7 @@ body {
             min-height: 460px;
             max-height: 460px;
             padding: 22px 33px 26px 22px;
-
-            // .card_content {
-            //     display: flex;
-            //     flex-direction: column;
-            // }
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
 
             .card_bg {
                 position: absolute;
@@ -147,9 +144,11 @@ body {
             .card_statistic {
                 margin-top: 13px;
                 display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
 
                 .statistic_sum {
-                    padding-top: 17px;
+                  display: table;
 
                     .statistic_row {
                         display: table-row;
@@ -157,9 +156,33 @@ body {
                         .row_name,
                         .row_sum {
                             display: table-cell;
-                            padding-right: 19px;
+                            padding: 0 19px 17px 0;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .cirle_progress {
+        .circle_progress_wrap {
+            transform: rotate(180deg);
+            circle {
+                stroke-dashoffset: 0;
+                transition: stroke-dashoffset 1s linear;
+                stroke: rgba(229, 229, 229, 0.3);
+                stroke-width: 10;
+            }
+
+            .progress_bar {
+                stroke-linecap: round;
+                
+                &.orange {
+                    stroke: $color-orange;
+                }
+
+                &.blue {
+                    stroke: $color-blue; 
                 }
             }
         }
@@ -266,7 +289,7 @@ body {
         &.section_padding {
             padding: 0 132px;
         }
-        
+
         .section_subtitle,
         .section_description {
             max-width: 870px;
