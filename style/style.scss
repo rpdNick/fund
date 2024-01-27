@@ -276,7 +276,9 @@ body {
         z-index: 4;
         background: $color-white;
         padding: 30px 20px;
-        min-height: 100svh;
+        height: 100%;
+        min-height: 340px;
+        overflow-y: auto;
         width: 280px;
         -webkit-box-shadow: 8px 3px 17px 0px rgba(0, 0, 0, 0.47);
         -moz-box-shadow: 8px 3px 17px 0px rgba(0, 0, 0, 0.47);
