@@ -2,6 +2,7 @@ $(".language_item").click(function () {
   $(this).parent(".language_picker").toggleClass("checked");
 });
 
+// progres circles
 function drowProgress() {
   let $circleProgress = $(".circle_progress_wrap");
 
@@ -15,8 +16,6 @@ function drowProgress() {
       } else {
         let r = $circle.attr("r");
         let c = Math.PI * (r * 2);
-        console.log(r);
-        console.log(c);
 
         if ($val < 0) {
           $val = 0;
@@ -33,3 +32,21 @@ function drowProgress() {
 }
 
 drowProgress();
+
+// Menu
+const mobileMenuButton = $("#burger_toggle");
+
+mobileMenuButton.click(function () {
+  $(this).toggleClass("active");
+  $("#mob_menu").toggleClass("active");
+});
+
+$(window).on("resize", function () {
+  let window = $(this); //this = window
+  console.log(window.width());
+  if (window.width() >= 850 && mobileMenuButton.hasClass("active")) {
+    mobileMenuButton.removeClass("active");
+    $('#mob_menu').removeClass("active");
+  }
+});
+
